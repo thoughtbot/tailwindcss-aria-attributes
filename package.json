@@ -1,0 +1,22 @@
+{
+  "name": "@thoughtbot/tailwindcss-aria-attributes",
+  "version": "1.0.0",
+  "description": "TailwindCSS aria- attribute utilities plugin",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thoughtbot/tailwindcss-aria-attributes.git"
+  },
+  "keywords": [
+    "tailwindcss"
+  ],
+  "author": "Sean Doyle <sean.p.doyle24@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thoughtbot/tailwindcss-aria-attributes/issues"
+  },
+  "homepage": "https://github.com/thoughtbot/tailwindcss-aria-attributes#readme",
+  "devDependencies": {
+    "tailwindcss": "^2.2.17"
+  }
+}
