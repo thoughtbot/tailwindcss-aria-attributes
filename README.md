@@ -134,3 +134,25 @@ and include the value:
   <a class="aria-current-page:font-bold" href="/about">About us</a>
 </nav>
 ```
+
+## License
+
+tailwindcss-aria-attributes is Copyright (c) 2021 thoughtbot, inc.
+It contains free software that may be redistributed
+under the terms specified in the [LICENSE] file.
+
+[LICENSE]: /LICENSE
+
+## About
+
+![thoughtbot](http://presskit.thoughtbot.com/images/thoughtbot-logo-for-readmes.svg)
+
+This project is maintained and funded by thoughtbot, inc.
+The names and logos for thoughtbot are trademarks of thoughtbot, inc.
+
+We love open source software!
+See [our other projects][community]
+or [hire us][hire] to help build your product.
+
+[community]: https://thoughtbot.com/community?utm_source=github
+[hire]: https://thoughtbot.com/hire-us?utm_source=github
