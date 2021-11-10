@@ -21,10 +21,19 @@ module.exports = plugin(({ addVariant, e }) => {
     "required",
     "selected",
   ].forEach(boolean => {
-    const selector = [ "aria", boolean ].join("-")
-
+    const selector = `aria-${boolean}`
     addVariant(selector, ({ modifySelectors, separator }) =>
       modifySelectors(({ className }) => `[${selector}="true"].${e(`${selector}${separator}${className}`)}`)
+    )
+
+    const groupSelector = `group-aria-${boolean}`
+    addVariant(groupSelector, ({ modifySelectors, separator }) =>
+      modifySelectors(({ className }) => `.group[aria-${boolean}="true"] .${e(`${groupSelector}${separator}${className}`)}`)
+    )
+
+    const peerSelector = `peer-aria-${boolean}`
+    addVariant(peerSelector, ({ modifySelectors, separator }) =>
+      modifySelectors(({ className }) => `.peer[aria-${boolean}="true"] ~ .${e(`${peerSelector}${separator}${className}`)}`)
     )
   })
 
