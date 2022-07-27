@@ -1,7 +1,13 @@
 const plugin = require("tailwindcss/plugin")
 
-module.exports = plugin(({ addVariant, e }) => {
-  [
+module.exports = plugin(({ addVariant }) => {
+  const addAriaVariant = (name, value) => {
+    addVariant(name,                          `[${name}="${value}"]&`)
+    addVariant(`peer-${name}`,   `:merge(.peer)[${name}="${value}"] ~ &`)
+    addVariant(`group-${name}`, `:merge(.group)[${name}="${value}"] &`)
+  }
+
+  const booleans = [
     "atomic",
     "busy",
     "checked",
@@ -20,22 +26,11 @@ module.exports = plugin(({ addVariant, e }) => {
     "readonly",
     "required",
     "selected",
-  ].forEach(boolean => {
-    const selector = `aria-${boolean}`
-    addVariant(selector, ({ modifySelectors, separator }) =>
-      modifySelectors(({ className }) => `[${selector}="true"].${e(`${selector}${separator}${className}`)}`)
-    )
+  ]
 
-    const groupSelector = `group-aria-${boolean}`
-    addVariant(groupSelector, ({ modifySelectors, separator }) =>
-      modifySelectors(({ className }) => `.group[aria-${boolean}="true"] .${e(`${groupSelector}${separator}${className}`)}`)
-    )
-
-    const peerSelector = `peer-aria-${boolean}`
-    addVariant(peerSelector, ({ modifySelectors, separator }) =>
-      modifySelectors(({ className }) => `.peer[aria-${boolean}="true"] ~ .${e(`${peerSelector}${separator}${className}`)}`)
-    )
-  })
+  for (const attribute of booleans) {
+    addAriaVariant(`aria-${attribute}`, "true")
+  }
 
   const enumerables = {
     autocomplete: [ "both", "inline", "list", "none" ],
@@ -49,20 +44,7 @@ module.exports = plugin(({ addVariant, e }) => {
 
   for (const [ attribute, values ] of Object.entries(enumerables)) {
     for (const value of values) {
-      const selector = `aria-${attribute}-${value}`
-      addVariant(selector, ({ modifySelectors, separator }) =>
-        modifySelectors(({ className }) => `[aria-${attribute}="${value}"].${e(`${selector}${separator}${className}`)}`)
-      )
-
-      const groupSelector = `group-aria-${attribute}-${value}`
-      addVariant(groupSelector, ({ modifySelectors, separator }) =>
-        modifySelectors(({ className }) => `.group[aria-${attribute}="${value}"] .${e(`${groupSelector}${separator}${className}`)}`)
-      )
-
-      const peerSelector = `peer-aria-${attribute}-${value}`
-      addVariant(peerSelector, ({ modifySelectors, separator }) =>
-        modifySelectors(({ className }) => `.peer[aria-${attribute}="${value}"] ~ .${e(`${peerSelector}${separator}${className}`)}`)
-      )
+      addAriaVariant(`aria-${attribute}-${value}`, value)
     }
   }
 })

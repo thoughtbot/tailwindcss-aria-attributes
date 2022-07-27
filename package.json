@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/thoughtbot/tailwindcss-aria-attributes#readme",
   "devDependencies": {
-    "tailwindcss": "^2.2.17"
+    "tailwindcss": "^3.0.0"
   }
 }
