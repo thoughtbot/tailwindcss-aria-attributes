@@ -1,6 +1,6 @@
 {
   "name": "@thoughtbot/tailwindcss-aria-attributes",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "TailwindCSS aria- attribute utilities plugin",
   "main": "index.js",
   "repository": {
