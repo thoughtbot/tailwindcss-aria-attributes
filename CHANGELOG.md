@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.0] - 2022-07-28
+
 ### Added
 
 - Depend on `tailwindcss@^3.0.0` to use the newly String-based `addVariant`
