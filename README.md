@@ -41,8 +41,8 @@ In some cases, attributes belong to both groups.
 ### Boolean attributes
 
 Variants for boolean attributes are active when the value is `"true"` and _only_
-`"true"`. When the attribute is missing or the value is `"false"`, the typical
-application of utility classes will apply.
+`"true"`. When the attribute is missing or the value is `"false"`, its other
+applicable utility classes are applied.
 
 Currently, the collection of variants includes support for the following boolean
 attributes:
@@ -86,7 +86,7 @@ Variants for enumerated values are active when the value is equivalent to the
 variant's suffix.
 
  When the attribute is missing or the value does not match the specified suffix,
-the typical application of utility classes will apply.
+its other applicable utility classes are applied.
 
 Currently, the collection of variants includes support for the following
 attributes and value combinations:
@@ -97,33 +97,33 @@ attributes and value combinations:
 |                                                                        | `aria-autocomplete-inline:`
 |                                                                        | `aria-autocomplete-list:`
 |                                                                        | `aria-autocomplete-none:`
-| [aria-current](https://www.w3.org/TR/wai-aria/#aria-current)           | `aria-current-date`
-|                                                                        | `aria-current-location`
-|                                                                        | `aria-current-page`
-|                                                                        | `aria-current-step`
-|                                                                        | `aria-current-time`
-| [aria-dropeffect](https://www.w3.org/TR/wai-aria/#aria-dropeffect)     | `aria-dropeffect-copy`
-|                                                                        | `aria-dropeffect-execute`
-|                                                                        | `aria-dropeffect-link`
-|                                                                        | `aria-dropeffect-move`
-|                                                                        | `aria-dropeffect-none`
-|                                                                        | `aria-dropeffect-popup`
-| [aria-haspopup](https://www.w3.org/TR/wai-aria/#aria-dropeffect)       | `aria-haspopup-dialog`
-|                                                                        | `aria-haspopup-grid`
-|                                                                        | `aria-haspopup-listbox`
-|                                                                        | `aria-haspopup-menu`
-|                                                                        | `aria-haspopup-tree`
-| [aria-orientation](https://www.w3.org/TR/wai-aria/#aria-dropeffect)    | `aria-orientation-horizontal`
-|                                                                        | `aria-orientation-undefined`
-|                                                                        | `aria-orientation-vertical`,
-| [aria-sort](https://www.w3.org/TR/wai-aria/#aria-dropeffect)           | `aria-sort-ascending`
-|                                                                        | `aria-sort-descending`
-|                                                                        | `aria-sort-none`
-|                                                                        | `aria-sort-other`,
-| [aria-relevant](https://www.w3.org/TR/wai-aria/#aria-dropeffect)       | `aria-relevant-additions`
-|                                                                        | `aria-relevant-all`
-|                                                                        | `aria-relevant-removals`
-|                                                                        | `aria-relevant-text`
+| [aria-current](https://www.w3.org/TR/wai-aria/#aria-current)           | `aria-current-date:`
+|                                                                        | `aria-current-location:`
+|                                                                        | `aria-current-page:`
+|                                                                        | `aria-current-step:`
+|                                                                        | `aria-current-time:`
+| [aria-dropeffect](https://www.w3.org/TR/wai-aria/#aria-dropeffect)     | `aria-dropeffect-copy:`
+|                                                                        | `aria-dropeffect-execute:`
+|                                                                        | `aria-dropeffect-link:`
+|                                                                        | `aria-dropeffect-move:`
+|                                                                        | `aria-dropeffect-none:`
+|                                                                        | `aria-dropeffect-popup:`
+| [aria-haspopup](https://www.w3.org/TR/wai-aria/#aria-dropeffect)       | `aria-haspopup-dialog:`
+|                                                                        | `aria-haspopup-grid:`
+|                                                                        | `aria-haspopup-listbox:`
+|                                                                        | `aria-haspopup-menu:`
+|                                                                        | `aria-haspopup-tree:`
+| [aria-orientation](https://www.w3.org/TR/wai-aria/#aria-dropeffect)    | `aria-orientation-horizontal:`
+|                                                                        | `aria-orientation-undefined:`
+|                                                                        | `aria-orientation-vertical:`
+| [aria-sort](https://www.w3.org/TR/wai-aria/#aria-dropeffect)           | `aria-sort-ascending:`
+|                                                                        | `aria-sort-descending:`
+|                                                                        | `aria-sort-none:`
+|                                                                        | `aria-sort-other:`
+| [aria-relevant](https://www.w3.org/TR/wai-aria/#aria-dropeffect)       | `aria-relevant-additions:`
+|                                                                        | `aria-relevant-all:`
+|                                                                        | `aria-relevant-removals:`
+|                                                                        | `aria-relevant-text:`
 
 To utilize an enumerated value variant, prefix the attribute name with `aria-`
 and include the value:
