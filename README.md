@@ -137,7 +137,7 @@ and include the value:
 
 ## License
 
-tailwindcss-aria-attributes is Copyright (c) 2021 thoughtbot, inc.
+tailwindcss-aria-attributes is Copyright (c) 2022 thoughtbot, inc.
 It contains free software that may be redistributed
 under the terms specified in the [LICENSE] file.
 
