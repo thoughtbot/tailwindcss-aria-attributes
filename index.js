@@ -6,6 +6,11 @@ module.exports = plugin(({ addVariant }) => {
     addVariant(`peer-${name}`,   `:merge(.peer)[${name}="${value}"] ~ &`)
     addVariant(`group-${name}`, `:merge(.group)[${name}="${value}"] &`)
   }
+  const addAriaEnumVariant = (name, value) => {
+    addVariant(`${name}-${value}`,                     `[${name}="${value}"]&`)
+    addVariant(`peer-${name}-${value}`,   `:merge(.peer)[${name}="${value}"] ~ &`)
+    addVariant(`group-${name}-${value}`, `:merge(.group)[${name}="${value}"] &`)
+  }
 
   const booleans = [
     "atomic",
@@ -44,7 +49,7 @@ module.exports = plugin(({ addVariant }) => {
 
   for (const [ attribute, values ] of Object.entries(enumerables)) {
     for (const value of values) {
-      addAriaVariant(`aria-${attribute}-${value}`, value)
+      addAriaEnumVariant(`aria-${attribute}`, value)
     }
   }
 })
